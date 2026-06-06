@@ -86,9 +86,34 @@ export default function ContactPage({ params }: { params: Params }) {
               <div className="font-display text-lg text-white font-semibold">{SITE.address}</div>
             </div>
           </div>
-          <p className="text-sm text-white/55">
-            {lang === "es" ? "Atendemos clientes en Houston, USA y LATAM remoto." : "We serve clients in Houston, the US, and remotely across LATAM."}
+          <p className="text-sm text-white/55 mb-4">
+            {lang === "es"
+              ? "Atendemos clientes en Houston, USA y LATAM remoto."
+              : "We serve clients in Houston, the US, and remotely across LATAM."}
           </p>
+          <div className="rounded-xl overflow-hidden border border-white/10 aspect-[16/9] bg-ink-deep">
+            <iframe
+              title={lang === "es" ? "Ubicacion en Houston" : "Houston location"}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}&output=embed`}
+              width="100%"
+              height="100%"
+              style={{
+                border: 0,
+                filter: "invert(0.92) hue-rotate(180deg) brightness(0.85) contrast(0.95)"
+              }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <a
+            href={`https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 text-xs uppercase tracking-wide2 text-violet-glow hover:text-violet-glow/80"
+          >
+            {lang === "es" ? "Abrir en Google Maps →" : "Open in Google Maps →"}
+          </a>
         </div>
       </div>
     </main>
