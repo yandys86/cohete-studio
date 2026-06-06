@@ -93,8 +93,8 @@ export default function ContactPage({ params }: { params: Params }) {
           </p>
           <div className="rounded-xl overflow-hidden border border-white/10 aspect-[16/9] bg-ink-deep">
             <iframe
-              title={lang === "es" ? "Ubicacion en Houston" : "Houston location"}
-              src={`https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}&output=embed`}
+              title={lang === "es" ? "Houston, TX" : "Houston, TX"}
+              src="https://www.google.com/maps?q=Houston%2C+TX+77030&z=11&output=embed"
               width="100%"
               height="100%"
               style={{
@@ -107,12 +107,12 @@ export default function ContactPage({ params }: { params: Params }) {
             />
           </div>
           <a
-            href={`https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}`}
+            href="https://www.google.com/maps?q=Houston%2C+TX+77030"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-3 text-xs uppercase tracking-wide2 text-violet-glow hover:text-violet-glow/80"
           >
-            {lang === "es" ? "Abrir en Google Maps →" : "Open in Google Maps →"}
+            {lang === "es" ? "Abrir Houston en Maps →" : "Open Houston in Maps →"}
           </a>
         </div>
       </div>

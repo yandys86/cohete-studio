@@ -2,10 +2,10 @@ import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import type { Lang } from "@/lib/i18n";
 
-// 7500 Kirby Dr, Houston, TX 77030 — approximate
+// Houston, TX 77030 area (Texas Medical Center generalized — no specific street)
 export const GEO = {
-  latitude: 29.7180,
-  longitude: -95.4148,
+  latitude: 29.7110,
+  longitude: -95.3990,
   region: "US-TX",
   placename: "Houston",
   zip: "77030"
@@ -58,9 +58,9 @@ export function buildLocalBusinessJsonLd(lang: Lang) {
         ? "Agencia full-service de marketing digital y comercial en Houston, TX. Branding, diseno web, publicidad pagada, SEO, redes sociales, marca personal y estrategia."
         : "Full-service digital and commercial marketing agency in Houston, TX. Branding, web design, paid ads, SEO, social media, personal branding, and strategy.",
     knowsLanguage: ["es", "en"],
+    // Service-area business — no streetAddress published. City + region + zip is enough for local SEO.
     address: {
       "@type": "PostalAddress",
-      streetAddress: "7500 Kirby Dr",
       addressLocality: "Houston",
       addressRegion: "TX",
       postalCode: GEO.zip,
@@ -71,7 +71,7 @@ export function buildLocalBusinessJsonLd(lang: Lang) {
       latitude: GEO.latitude,
       longitude: GEO.longitude
     },
-    hasMap: `https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}`,
+    hasMap: `https://www.google.com/maps?q=Houston%2C+TX+${GEO.zip}`,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
