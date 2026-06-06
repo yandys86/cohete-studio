@@ -88,8 +88,8 @@ export const DICT: Record<Lang, Dict> = {
     navContact: "Contacto",
 
     heroBadge: "Houston, TX · Marketing digital + comercial",
-    heroTitle1: "Lanzamos marcas",
-    heroTitle2: "al estratosfera.",
+    heroTitle1: "Lanzamos",
+    heroTitle2: "a la estratosfera.",
     heroTitleHighlight: "marcas",
     heroSubtitle:
       "Desde la idea hasta el despegue. Branding, web, publicidad, contenido y estrategia para fundadores, emprendedores y empresas que quieren crecer en serio.",
@@ -170,7 +170,7 @@ export const DICT: Record<Lang, Dict> = {
     navContact: "Contact",
 
     heroBadge: "Houston, TX · Digital + commercial marketing",
-    heroTitle1: "We launch brands",
+    heroTitle1: "We launch",
     heroTitle2: "into orbit.",
     heroTitleHighlight: "brands",
     heroSubtitle:
